@@ -34,6 +34,7 @@ const Home = (): JSX.Element => {
     async function loadProducts() {
       const response = await api.get('/products')
       const productsList = response.data
+
       setProducts(productsList)
     }
 
@@ -46,7 +47,7 @@ const Home = (): JSX.Element => {
 
   return (
     <ProductList>
-      {products.map(product => {
+      {products && products.map((product) => {
         return (
           <li key={product.id}>
             <img src={product.image} alt={product.title} />
@@ -57,12 +58,12 @@ const Home = (): JSX.Element => {
               data-testid="add-product-button"
             onClick={() => handleAddProduct(product.id)}
             >
-            <div data-testid="cart-product-quantity">
-              <MdAddShoppingCart size={16} color="#FFF" />
-              {cartItemsAmount[product.id] || 0}
-            </div>
+              <div data-testid="cart-product-quantity">
+                <MdAddShoppingCart size={16} color="#FFF" />
+                {cartItemsAmount[product.id] || 0}
+              </div>
 
-            <span>ADICIONAR AO CARRINHO</span>
+              <span>ADICIONAR AO CARRINHO</span>
             </button>
           </li>
         )
