@@ -36,8 +36,8 @@
 <img alt="cartmobile" title="rocketshoes-cart-mobile" src="./public/cartmobile.png"/>
 
 * Web
-<img alt="homeweb" title="rocketshoes-home-web" src="./public/homeweb.png" />
-<img alt="cartweb" title="rocketshoes-cart-web" src="./public/cartweb.png" />
+<img alt="homeweb" title="rocketshoes-home-web" src="./public/homeweb1.png" />
+<img alt="cartweb" title="rocketshoes-cart-web" src="./public/cartweb1.png" />
 
 ### Como instalar
 ---
