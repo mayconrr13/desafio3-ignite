@@ -27,6 +27,20 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media (max-width: 650px) {
+    max-width: 430px;
+    margin: 0 auto;
+
+    footer {
+      flex-direction: column-reverse;
+
+      button {
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+  }
 `;
 
 export const ProductTable = styled.table`
@@ -95,6 +109,62 @@ export const ProductTable = styled.table`
       }
     }
   }
+
+  @media (max-width: 650px) {
+    thead th {
+      display: none;
+    }
+
+    tbody tr {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 4rem 4rem;
+      gap: 0px 0px;
+      grid-template-areas:
+        "image description"
+        "add subtotal"
+        "delete delete";
+
+      & + tr {
+        margin-top: 2rem;
+      }
+
+      td {
+        border: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      td:nth-child(1) {
+        grid-area: image;
+      }
+
+      td:nth-child(2) {
+        grid-area: description;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      td:nth-child(3) {
+        grid-area: add;
+      }
+
+      td:nth-child(4) {
+        grid-area: subtotal;
+        
+        
+      }
+
+      td:nth-child(5) {
+        grid-area: delete;
+        width: 100%;
+
+        border-bottom: 1px solid #eee;
+      }
+    }
+  }
 `;
 
 export const Total = styled.div`
@@ -109,5 +179,10 @@ export const Total = styled.div`
   strong {
     font-size: 28px;
     margin-left: 5px;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    margin-left: auto;
   }
 `;

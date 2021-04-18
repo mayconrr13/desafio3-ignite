@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Container = styled.header`
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 50px 0;
@@ -12,6 +13,17 @@ export const Container = styled.header`
 
     &:hover {
       opacity: 0.7;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+
+
+    a + a {
+      margin-top: 2rem; 
+      margin-left: auto;
     }
   }
 `;
